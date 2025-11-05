@@ -1,0 +1,2021 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poxce Cafe</title>
+    <link rel="stylesheet" href="nav.css">
+    <link rel="stylesheet" href="menu.css">
+    <link rel="icon" href="img/999.png">
+    <link rel="stylesheet" href="sidebar.css">
+    <link rel="stylesheet" href="modal.css">
+    <link rel="stylesheet" href="cart.css">
+</head>
+<body>
+
+
+
+
+    <div class="nav">
+        <div class="left-section">
+        <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a id="menu" href="menu.html">MENU</a></li>
+            <li><a href="about-us.html">ABOUT US</a></li>
+      
+            
+        </ul>
+        </div>
+        <div class="middle-section">
+            <img src="img/999.png" alt="website logo">
+
+        </div>
+
+        <div class="right-section">
+        <span><?php echo $fetch_user['name']; ?></span>
+        <button><a href="index.php?logout=<?php echo $user_id; ?>" onclick="return confirm('are your sure you want to logout?');" class="delete-btn">logout</a></button>
+            <img src="img/logo1.png" onclick="openModal('modal41')" alt="">
+            
+            
+    
+   
+        </div>
+        
+    </div>
+   
+
+
+   
+
+    
+    <div class="sidebar">
+        <ul>
+                <div class="sidebar-nav">
+
+                    <div>
+                    <img class="menu-icon" src="img/menu5.png" alt="" onclick="menu()">
+                    </div>
+                    <div class="food-nav"><li><a>Drinks</a></li></div>
+                    
+                </div>
+            <div id="menu">
+            <div  class="menu-name">
+                <div id="subMenu" class="menu-names">
+                    <div class="item-icon">
+                        <img src="img/item1.png" alt="">
+                        <span onclick="showContainer('container1')">Hot Coffee</span>
+                    </div>
+                    <div class="item-icon">
+                        <img src="img/item2.png" alt="">
+                        <span onclick="showContainer('container2')">Ice Coffee</span>
+                       
+                    </div>
+                    <div class="item-icon">
+                        <img src="img/item3.png" alt="">
+                        <span onclick="showContainer('container3')">Milkshake</span>
+                    </div>
+                
+
+                    
+                    
+                    
+                   
+                </div>
+            </div>
+            </div>
+            
+
+                <div class="sidebar-nav">
+                    <div>
+                        <img class="menu-icon" src="img/menu6.png" alt="" onclick="menu2()">
+                        </div>
+                        <div class="food-nav"><li><a>Foods</a></li></div>
+                </div>
+
+            <div  class="menu-name2">
+                <div id="subMenu2" class="menu-names2">
+                    <div class="item-icon">
+                        <img src="img/item11.png" alt="">
+                        <span onclick="showContainer('container5')">Burger & Fries</span>
+                    </div>
+                    <div class="item-icon">
+                        <img src="img/item21.png" alt="">
+                        <span onclick="showContainer('container6')">Desserts</span>
+                    </div>
+                    <div class="item-icon">
+                        <img src="img/item31.png" alt="">
+                        <span onclick="showContainer('container7')">Pizza</span>
+                    </div>
+            
+                </div>
+            </div>
+         
+        </ul>
+    </div>
+
+   
+
+
+    <div id="products">
+        <div class="product">
+        <div class="modal" id="modal1">
+            <div  class="menu-price">
+                <div class="product-img">
+
+                    <img src="img/cart-item1.png" >
+                </div>
+                <div class="container2">
+                    <div class="close">
+                        <span onclick="closeModal('modal1')">&times;</span>
+                    </div>
+                    <div class="title">
+                        <span>Hot Americano</span>
+                    </div>
+                    <div class="pd">
+                        <p>Hot coffee is prepared by pouring hot water in some grounded roasted coffee bean.</p>
+                    </div>
+                    <hr>
+                    <div class="qty-container">
+                        <span class="qty-title">Quantity: </span>
+                            <input class="quantity-input" type="number" value="1">
+                    </div>
+                    <div class="carts">
+                    <button class="add-to-cart" data-name="Hot Americano" data-price="130" data-img="img/product1.png">Add to Cart</button>
+                    </div>
+                    <div class="price">
+                        <span>₱130</span>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+    
+
+       
+
+        <div class="product">
+        <div class="modal" id="modal2">
+            <div  class="menu-price">
+                <div class="product-img">
+                    <img src="img/cart-item2.png" >
+                </div>
+                <div class="container2">
+                    <div class="close">
+                        <span onclick="closeModal('modal2')">&times;</span>
+                    </div>
+                    <div class="title">
+                        <span>Hot Espresso</span>
+                    </div>
+                    <div class="pd">
+                        <p>Hot coffee is prepared by pouring hot water in some grounded roasted coffee bean.</p>
+                    </div>
+                    <hr>
+                    <div class="qty-container">
+                    <span class="qty-title">Quantity: </span>
+                            <input class="quantity-input" type="number" value="1">
+                    </div>
+                    <div class="carts">
+                        <button class="add-to-cart" data-name="Hot Espresso" data-price="120" data-img="img/product2.png">Add to Cart</button>
+                    </div>
+                    <div class="price">
+                        <span>₱120</span>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+        <div class="product">
+        <div class="modal" id="modal3">
+            <div  class="menu-price">
+                <div class="product-img">
+                    <img src="img/cart-item3.png" alt="">
+                </div>
+                <div class="container2">
+                    <div class="close">
+                        <span onclick="closeModal('modal3')">&times;</span>
+                    </div>
+                    <div class="title">
+                        <span>Hot Cappuccino</span>
+                    </div>
+                    <div class="pd">
+                    <p>Hot coffee is prepared by pouring hot water in some grounded roasted coffee bean.</p>
+                    </div>
+                    <hr>
+                    <div class="qty-container">
+                    <span class="qty-title">Quantity: </span>
+                            <input class="quantity-input" type="number" value="1">
+                    </div>
+                    <div class="carts">
+                    <button class="add-to-cart" data-name="Hot Cappuccino" data-price="130" data-img="img/product3.png">Add to Cart</button>
+                    </div>
+                    <div class="price">
+                        <span>₱130</span>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+        <div class="product">
+        <div class="modal" id="modal4">
+            <div  class="menu-price">
+                <div class="product-img">
+                    <img src="img/cart-item4.png" alt="">
+                </div>
+                <div class="container2">
+                    <div class="close">
+                        <span onclick="closeModal('modal4')">&times;</span>
+                    </div>
+                    <div class="title">
+                        <span>Hot Cafe Latte</span>
+                    </div>
+                    <div class="pd">
+                    <p>Hot coffee is prepared by pouring hot water in some grounded roasted coffee bean.</p>
+                    </div>
+                    <hr>
+                    <div class="qty-container">
+                    <span class="qty-title">Quantity: </span>
+                            <input class="quantity-input" type="number" value="1">
+                    </div>
+                    <div class="carts">
+                    <button class="add-to-cart" data-name="Hot Latte" data-price="130" data-img="img/product4.png">Add to Cart</button>
+                    </div>
+                    <div class="price">
+                        <span>₱130</span>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+        <div class="product">
+        <div class="modal" id="modal5">
+            <div  class="menu-price">
+                <div class="product-img">
+                    <img src="img/cart-item5.png" alt="">
+                </div>
+                <div class="container2">
+                    <div class="close">
+                        <span onclick="closeModal('modal5')">&times;</span>
+                    </div>
+                    <div class="title">
+                        <span>Hot Long Black</span>
+                    </div>
+                    <div class="pd">
+                    <p>Hot coffee is prepared by pouring hot water in some grounded roasted coffee bean.</p>
+                    </div>
+                    <hr>
+                    <div class="qty-container">
+                    <span class="qty-title">Quantity: </span>
+                            <input class="quantity-input" type="number" value="1">
+                    </div>
+                    <div class="carts">
+                    <button class="add-to-cart" data-name="Long Black" data-price="140" data-img="img/product5.png">Add to Cart</button>
+                    </div>
+                    <div class="price">
+                        <span>₱140</span>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+        <div class="product">
+        <div class="modal" id="modal6">
+            <div  class="menu-price">
+                <div class="product-img">
+                    <img src="img/cart-item6.png" alt="">
+                </div>
+                <div class="container2">
+                    <div class="close">
+                        <span onclick="closeModal('modal6')">&times;</span>
+                    </div>
+                    <div class="title">
+                        <span>Hot Caramel Macchiato</span>
+                    </div>
+                    <div class="pd">
+                        <      <p>Hot coffee is prepared by pouring hot water in some grounded roasted coffee bean.</p>
+                    </div>
+                    <hr>
+                    <div class="qty-container">
+                    <span class="qty-title">Quantity: </span>
+                            <input class="quantity-input" type="number" value="1">
+                    </div>
+                    <div class="carts">
+                    <button class="add-to-cart" data-name="Caramel Macchiato" data-price="140" data-img="img/product6.png">Add to Cart</button>
+                    </div>
+                    <div class="price">
+                        <span>₱140</span>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+        <div class="product">
+        <div class="modal" id="modal7">
+            <div  class="menu-price">
+                <div class="product-img">
+                    <img src="img/cart-item7.png" alt="">
+                </div>
+                <div class="container2">
+                    <div class="close">
+                        <span onclick="closeModal('modal7')">&times;</span>
+                    </div>
+                    <div class="title">
+                        <span>Hot Chocolate</span>
+                    </div>
+                    <div class="pd">
+                    <p>Hot coffee is prepared by pouring hot water in some grounded roasted coffee bean.</p>
+                    </div>
+                    <hr>
+                    <div class="qty-container">
+                    <span class="qty-title">Quantity: </span>
+                            <input class="quantity-input" type="number" value="1">
+                    </div>
+                    <div class="carts">
+                    <button class="add-to-cart" data-name="Hot Chocolaate" data-price="130" data-img="img/product7.png">Add to Cart</button>
+                    </div>
+                    <div class="price">
+                        <span>₱130</span>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+        <div class="product">
+        <div class="modal" id="modal8">
+            <div  class="menu-price">
+                <div class="product-img">
+                    <img src="img/cart-item8.png" alt="">
+                </div>
+                <div class="container2">
+                    <div class="close">
+                        <span onclick="closeModal('modal8')">&times;</span>
+                    </div>
+                    <div class="title">
+                        <span>Hot Mocha</span>
+                    </div>
+                    <div class="pd">
+                    <p>Hot coffee is prepared by pouring hot water in some grounded roasted coffee bean.</p>
+                    </div>
+                    <hr>
+                    <div class="qty-container">
+                    <span class="qty-title">Quantity: </span>
+                            <input class="quantity-input" type="number" value="1">
+                    </div>
+                    <div class="carts">
+                    <button class="add-to-cart" data-name="Hot Mocha" data-price="140" data-img="img/product8.png">Add to Cart</button>
+                    </div>
+                    <div class="price">
+                        <span>₱140</span>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+        <div class="product">
+        <div class="modal" id="modal9">
+            <div  class="menu-price">
+                <div class="product-img">
+                    <img src="img/cart-item01.PNG" alt="">
+                </div>
+                <div class="container2">
+                    <div class="close">
+                        <span onclick="closeModal('modal9')">&times;</span>
+                    </div>
+                    <div class="title">
+                        <span>Vietnamese Iced Coffee</span>
+                    </div>
+                    <div class="pd">
+                        <p>Iced coffee is prepared by brewing coffee and adding some cold water or milk</p>
+                    </div>
+                    <hr>
+                    <div class="qty-container">
+                    <span class="qty-title">Quantity: </span>
+                            <input class="quantity-input" type="number" value="1">
+                    </div>
+                    <div class="carts">
+                    <button class="add-to-cart" data-name="Vietnamese Iced Coffee" data-price="150" data-img="img/product21.png">Add to Cart</button>
+                    </div>
+                    <div class="price">
+                        <span>₱150</span>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+        <div class="product">
+        <div class="modal" id="modal10">
+            <div  class="menu-price">
+                <div class="product-img">
+                    <img src="img/cart-item02.webp" alt="">
+                </div>
+                <div class="container2">
+                    <div class="close">
+                        <span onclick="closeModal('modal10')">&times;</span>
+                    </div>
+                    <div class="title">
+                        <span>Iced Golden Caffe Latte</span>
+                    </div>
+                    <div class="pd">
+                    <p>Iced coffee is prepared by brewing coffee and adding some cold water or milk</p>
+                    </div>
+                    <hr>
+                    <div class="qty-container">
+                    <span class="qty-title">Quantity: </span>
+                            <input class="quantity-input" type="number" value="1">
+                    </div>
+                    <div class="carts">
+                    <button class="add-to-cart" data-name="Iced golden latte" data-price="150" data-img="img/product22.png">Add to Cart</button>
+                    </div>
+                    <div class="price">
+                        <span>₱150</span>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+        <div class="product">
+        <div class="modal" id="modal11">
+            <div  class="menu-price">
+                <div class="product-img">
+                    <img src="img/cart-item03.webp" alt="">
+                </div>
+                <div class="container2">
+                    <div class="close">
+                        <span onclick="closeModal('modal11')">&times;</span>
+                    </div>
+                    <div class="title">
+                        <span>Baridi Cold Brew</span>
+                    </div>
+                    <div class="pd">
+                    <p>Iced coffee is prepared by brewing coffee and adding some cold water or milk</p>
+                    </div>
+                    <hr>
+                    <div class="qty-container">
+                    <span class="qty-title">Quantity: </span>
+                            <input class="quantity-input" type="number" value="1">
+                    </div>
+                    <div class="carts">
+                    <button class="add-to-cart" data-name="Baridi cold Brew" data-price="130" data-img="img/product23.png">Add to Cart</button>
+                    </div>
+                    <div class="price">
+                        <span>₱130</span>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+        <div class="product">
+        <div class="modal" id="modal12">
+            <div  class="menu-price">
+                <div class="product-img">
+                    <img src="img/cart-item04.webp" alt="">
+                </div>
+                <div class="container2">
+                    <div class="close">
+                        <span onclick="closeModal('modal12')">&times;</span>
+                    </div>
+                    <div class="title">
+                        <span>Brown sugar cold Brew oat <br> latte With Jelly</span>
+                    </div>
+                    <div class="pd">
+                    <p>Iced coffee is prepared by brewing coffee and adding some cold water or milk</p>
+                    </div>
+                    <hr>
+                    <div class="qty-container">
+                    <span class="qty-title">Quantity: </span>
+                            <input class="quantity-input" type="number" value="1">
+                    </div>
+                    <div class="carts">
+                    <button class="add-to-cart" data-name="Brown sugar cold brew oat" data-price="130" data-img="img/product24.png">Add to Cart</button>
+                    </div>
+                    <div class="price">
+                        <span>₱130</span>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+        <div class="product">
+        <div class="modal" id="modal13">
+            <div  class="menu-price">
+                <div class="product-img">
+                    <img src="img/cart-item05.webp" alt="">
+                </div>
+                <div class="container2">
+                    <div class="close">
+                        <span onclick="closeModal('modal13')">&times;</span>
+                    </div>
+                    <div class="title">
+                        <span>The Black Tie</span>
+                    </div>
+                    <div class="pd">
+                    <p>Iced coffee is prepared by brewing coffee and adding some cold water or milk</p>
+                    </div>
+                    <hr>
+                    <div class="qty-container">
+                        <<span class="qty-title">Quantity: </span>
+                            <input class="quantity-input" type="number" value="1">
+                    </div>
+                    <div class="carts">
+                    <button class="add-to-cart" data-name="The Black Tie" data-price="130" data-img="img/product25.png">Add to Cart</button>
+                    </div>
+                    <div class="price">
+                        <span>₱130</span>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+        <div class="product">
+        <div class="modal" id="modal14">
+            <div  class="menu-price">
+                <div class="product-img">
+                    <img src="img/cart-item06.webp" alt="">
+                </div>
+                <div class="container2">
+                    <div class="close">
+                        <span onclick="closeModal('modal14')">&times;</span>
+                    </div>
+                    <div class="title">
+                        <span>Iced Espresso</span>
+                    </div>
+                    <div class="pd">
+                    <p>Iced coffee is prepared by brewing coffee and adding some cold water or milk</p>
+                    </div>
+                    <hr>
+                    <div class="qty-container">
+                    <span class="qty-title">Quantity: </span>
+                            <input class="quantity-input" type="number" value="1">
+                    </div>
+                    <div class="carts">
+                    <button class="add-to-cart" data-name="Iced Espresso" data-price="140" data-img="img/product26.png">Add to Cart</button>
+                    </div>
+                    <div class="price">
+                        <span>₱140</span>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+        <div class="product">
+        <div class="modal" id="modal15">
+            <div  class="menu-price">
+                <div class="product-img">
+                    <img src="img/cart-item07.webp" alt="">
+                </div>
+                <div class="container2">
+                    <div class="close">
+                        <span onclick="closeModal('modal15')">&times;</span>
+                    </div>
+                    <div class="title">
+                        <span>Iced Caramel Macchiato</span>
+                    </div>
+                    <div class="pd">
+                    <p>Iced coffee is prepared by brewing coffee and adding some cold water or milk</p>
+                    </div>
+                    <hr>
+                    <div class="qty-container">
+                        <<span class="qty-title">Quantity: </span>
+                            <input class="quantity-input" type="number" value="1">
+                    </div>
+                    <div class="carts">
+                    <button class="add-to-cart" data-name="Iced Caramel Macchiato" data-price="130" data-img="img/product27.png">Add to Cart</button>
+                    </div>
+                    <div class="price">
+                        <span>₱130</span>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+        <div class="product">
+        <div class="modal" id="modal16">
+            <div  class="menu-price">
+                <div class="product-img">
+                    <img src="img/cart-item001.png" alt="">
+                </div>
+                <div class="container2">
+                    <div class="close">
+                        <span onclick="closeModal('modal16')">&times;</span>
+                    </div>
+                    <div class="title">
+                        <span>Vanilla Milkshake</span>
+                    </div>
+                    <div class="pd">
+                        <p>Milkshake is made by blending milk, ice cream, and flavorings or sweetners.</p>
+                    </div>
+                    <hr>
+                    <div class="qty-container">
+                        <<span class="qty-title">Quantity: </span>
+                            <input class="quantity-input" type="number" value="1">
+                    </div>
+                    <div class="carts">
+                    <button class="add-to-cart" data-name="Vanilla Milkshake" data-price="150" data-img="img/product31.png">Add to Cart</button>
+                    </div>
+                    <div class="price">
+                        <span>₱150</span>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+        </div>
+
+        <div class="product">
+        <div class="modal" id="modal17">
+            <div  class="menu-price">
+                <div class="product-img">
+                    <img src="img/cart-item002.png" alt="">
+                </div>
+                <div class="container2">
+                    <div class="close">
+                        <span onclick="closeModal('modal17')">&times;</span>
+                    </div>
+                    <div class="title">
+                        <span>Sundae Chocolate</span>
+                    </div>
+                    <div class="pd">
+                    <p>Milkshake is made by blending milk, ice cream, and flavorings or sweetners.</p>
+                    </div>
+                    <hr>
+                    <div class="qty-container">
+                    <span class="qty-title">Quantity: </span>
+                            <input class="quantity-input" type="number" value="1">
+                    </div>
+                    <div class="carts">
+                    <button class="add-to-cart" data-name="Sundae Chocolate" data-price="160" data-img="img/product32.png">Add to Cart</button>
+                    </div>
+                    <div class="price">
+                        <span>₱160</span>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+        <div class="product">
+        <div class="modal" id="modal18">
+            <div  class="menu-price">
+                <div class="product-img">
+                    <img src="img/cart-item003.webp" alt="">
+                </div>
+                <div class="container2">
+                    <div class="close">
+                        <span onclick="closeModal('modal18')">&times;</span>
+                    </div>
+                    <div class="title">
+                        <span>Peppermint Tart</span>
+                    </div>
+                    <div class="pd">
+                    <p>Milkshake is made by blending milk, ice cream, and flavorings or sweetners.</p>
+                    </div>
+                    <hr>
+                    <div class="qty-container">
+                    <span class="qty-title">Quantity: </span>
+                            <input class="quantity-input" type="number" value="1">
+                    </div>
+                    <div class="carts">
+                    <button class="add-to-cart" data-name="Peppermint Tart" data-price="155" data-img="img/product33.png">Add to Cart</button>
+                    </div>
+                    <div class="price">
+                        <span>₱155</span>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+        <div class="product">
+        <div class="modal" id="modal19">
+            <div  class="menu-price">
+                <div class="product-img">
+                    <img src="img/cart-item004.png" alt="">
+                </div>
+                <div class="container2">
+                    <div class="close">
+                        <span onclick="closeModal('modal19')">&times;</span>
+                    </div>
+                    <div class="title">
+                        <span>Cookies And Cream</span>
+                    </div>
+                    <div class="pd">
+                    <p>Milkshake is made by blending milk, ice cream, and flavorings or sweetners.</p>
+                    </div>
+                    <hr>
+                    <div class="qty-container">
+                    <span class="qty-title">Quantity: </span>
+                            <input class="quantity-input" type="number" value="1">
+                    </div>
+                    <div class="carts">
+                    <button class="add-to-cart" data-name="Cookies And Cream" data-price="160" data-img="img/product34.png">Add to Cart</button>
+                    </div>
+                    <div class="price">
+                        <span>₱160</span>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+        <div class="product">
+        <div class="modal" id="modal20">
+            <div  class="menu-price">
+                <div class="product-img">
+                    <img src="img/cart-item005.webp" alt="">
+                </div>
+                <div class="container2">
+                    <div class="close">
+                        <span onclick="closeModal('modal20')">&times;</span>
+                    </div>
+                    <div class="title">
+                        <span>Pistachio White Chocolate</span>
+                    </div>
+                    <div class="pd">
+                    <p>Milkshake is made by blending milk, ice cream, and flavorings or sweetners.</p>
+                    </div>
+                    <hr>
+                    <div class="qty-container">
+                    <span class="qty-title">Quantity: </span>
+                            <input class="quantity-input" type="number" value="1">
+                    </div>
+                    <div class="carts">
+                    <button class="add-to-cart" data-name="Pistachio White Chocolaate" data-price="150" data-img="img/product35.png">Add to Cart</button>
+                    </div>
+                    <div class="price">
+                        <span>₱150</span>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+        
+        <div class="product">
+        <div class="modal" id="modal21">
+            <div  class="menu-price">
+                <div class="product-img">
+                    <img src="img/cart-item0011.png" alt="">
+                </div>
+                <div class="container2">
+                    <div class="close">
+                        <span onclick="closeModal('modal21')">&times;</span>
+                    </div>
+                    <div class="title">
+                        <span>Classic Cheeseburger</span>
+                    </div>
+                    <div class="pd">
+                        <p>Burgers are a dish consisting of a round patty. of ground up beef or some other savory ingredients.</p>
+                    </div>
+                    <hr>
+                    <div class="qty-container">
+                    <span class="qty-title">Quantity: </span>
+                            <input class="quantity-input" type="number" value="1">
+                    </div>
+                    <div class="carts">
+                    <button class="add-to-cart" data-name="Classic Cheeseburger" data-price="230" data-img="img/product41.png">Add to Cart</button>
+                    </div>
+                    <div class="price">
+                        <span>₱230</span>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+        <div class="product">      
+        <div class="modal" id="modal22">
+            <div  class="menu-price">
+                <div class="product-img">
+                    <img src="img/cart-item0012.png" alt="">
+                </div>
+                <div class="container2">
+                    <div class="close">
+                        <span onclick="closeModal('modal22')">&times;</span>
+                    </div>
+                    <div class="title">
+                        <span>Bacon Cheeseburger</span>
+                    </div>
+                    <div class="pd">
+                    <p>Burgers are a dish consisting of a round patty. of ground up beef or some other savory ingredients.</p>
+                    </div>
+                    <hr>
+                    <div class="qty-container">
+                    <span class="qty-title">Quantity: </span>
+                            <input class="quantity-input" type="number" value="1">
+                    </div>
+                    <div class="carts">
+                    <button class="add-to-cart" data-name="Bacon Cheeseburger" data-price="250" data-img="img/product42.png">Add to Cart</button>
+                    </div>
+                    <div class="price">
+                        <span>₱250</span>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+        <div class="product">
+        <div class="modal" id="modal23">
+            <div  class="menu-price">
+                <div class="product-img">
+                    <img src="img/cart-item0013.png" alt="">
+                </div>
+                <div class="container2">
+                    <div class="close">
+                        <span onclick="closeModal('modal23')">&times;</span>
+                    </div>
+                    <div class="title">
+                        <span>Chicken Burger</span>
+                    </div>
+                    <div class="pd">
+                    <p>Burgers are a dish consisting of a round patty. of ground up beef or some other savory ingredients.</p>
+                    </div>
+                    <hr>
+                    <div class="qty-container">
+                    <span class="qty-title">Quantity: </span>
+                            <input class="quantity-input" type="number" value="1">
+                    </div>
+                    <div class="carts">
+                    <button class="add-to-cart" data-name="Chicken Burger" data-price="240" data-img="img/product43.png">Add to Cart</button>
+                    </div>
+                    <div class="price">
+                        <span>₱240</span>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+        <div class="product">
+        <div class="modal" id="modal24">
+            <div  class="menu-price">
+                <div class="product-img">
+                    <img src="img/cart-item0014.png" alt="">
+                </div>
+                <div class="container2">
+                    <div class="close">
+                        <span onclick="closeModal('modal24')">&times;</span>
+                    </div>
+                    <div class="title">
+                        <span>Cheese Fries</span>
+                    </div>
+                    <div class="pd">
+                        <p>Fries are made by cutting up potatoes in some small strips and fryig them in some oil.</p>
+                    </div>
+                    <hr>
+                    <div class="qty-container">
+                    <span class="qty-title">Quantity: </span>
+                            <input class="quantity-input" type="number" value="1">
+                    </div>
+                    <div class="carts">
+                    <button class="add-to-cart" data-name="Cheese Fries" data-price="150" data-img="img/product44.png">Add to Cart</button>
+                    </div>
+                    <div class="price">
+                        <span>₱150</span>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+        <div class="product">
+        <div class="modal" id="modal25">
+            <div  class="menu-price">
+                <div class="product-img">
+                    <img src="img/cart-item0015.png" alt="">
+                </div>
+                <div class="container2">
+                    <div class="close">
+                        <span onclick="closeModal('modal25')">&times;</span>
+                    </div>
+                    <div class="title">
+                        <span>Sour Cream Fries</span>
+                    </div>
+                    <div class="pd">
+                    <p>Fries are made by cutting up potatoes in some small strips and fryig them in some oil.</p>
+                    </div>
+                    <hr>
+                    <div class="qty-container">
+                    <span class="qty-title">Quantity: </span>
+                            <input class="quantity-input" type="number" value="1">
+                    </div>
+                    <div class="carts">
+                    <button class="add-to-cart" data-name="Sour Cream Fries" data-price="150" data-img="img/product45.png">Add to Cart</button>
+                    </div>
+                    <div class="price">
+                        <span>₱150</span>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+        <div class="product">        
+        <div class="modal" id="modal26">
+            <div  class="menu-price">
+                <div class="product-img">
+                    <img src="img/cart-item0016.png" alt="">
+                </div>
+                <div class="container2">
+                    <div class="close">
+                        <span onclick="closeModal('modal26')">&times;</span>
+                    </div>
+                    <div class="title">
+                        <span>Curly Salted Fries</span>
+                    </div>
+                    <div class="pd">
+                    <p>Fries are made by cutting up potatoes in some small strips and fryig them in some oil.</p>
+                    </div>
+                    <hr>
+                    <div class="qty-container">
+                    <span class="qty-title">Quantity: </span>
+                            <input class="quantity-input" type="number" value="1">
+                    </div>
+                    <div class="carts">
+                    <button class="add-to-cart" data-name="Curly Salted Fries" data-price="140" data-img="img/product46.png">Add to Cart</button>
+                    </div>
+                    <div class="price">
+                        <span>₱140</span>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+        <div class="product">       
+        <div class="modal" id="modal27">
+            <div  class="menu-price">
+                <div class="product-img">
+                    <img src="img/cart-item0021.png" alt="">
+                </div>
+                <div class="container2">
+                    <div class="close">
+                        <span onclick="closeModal('modal27')">&times;</span>
+                    </div>
+                    <div class="title">
+                        <span>Panna Cotta</span>
+                    </div>
+                    <div class="pd">
+                        <p>Desserts consists of sweet foods, such as cake, biscuit, ice cream.</p>
+                    </div>
+                    <hr>
+                    <div class="qty-container">
+                    <span class="qty-title">Quantity: </span>
+                            <input class="quantity-input" type="number" value="1">
+                    </div>
+                    <div class="carts">
+                    <button class="add-to-cart" data-name="Panna Cotta" data-price="150" data-img="img/product51.png">Add to Cart</button>
+                    </div>
+                    <div class="price">
+                        <span>₱150</span>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+        
+        <div class="product">
+        <div class="modal" id="modal28">
+            <div  class="menu-price">
+                <div class="product-img">
+                    <img src="img/cart-item0022.png" alt="">
+                </div>
+                <div class="container2">
+                    <div class="close">
+                        <span onclick="closeModal('modal28')">&times;</span>
+                    </div>
+                    <div class="title">
+                        <span>Carrot Cake</span>
+                    </div>
+                    <div class="pd">
+                    <p>Desserts consists of sweet foods, such as cake, biscuit, ice cream.</p>
+                    </div>
+                    <hr>
+                    <div class="qty-container">
+                    <span class="qty-title">Quantity: </span>
+                            <input class="quantity-input" type="number" value="1">
+                    </div>
+                    <div class="carts">
+                    <button class="add-to-cart" data-name="Carrot Cake" data-price="170" data-img="img/product52.png">Add to Cart</button>
+                    </div>
+                    <div class="price">
+                        <span>₱170</span>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+        <div class="product">        
+        <div class="modal" id="modal29">
+            <div  class="menu-price">
+                <div class="product-img">
+                    <img src="img/cart-item0023.png" alt="">
+                </div>
+                <div class="container2">
+                    <div class="close">
+                        <span onclick="closeModal('modal29')">&times;</span>
+                    </div>
+                    <div class="title">
+                        <span>Chocolate Cake</span>
+                    </div>
+                    <div class="pd">
+                    <p>Desserts consists of sweet foods, such as cake, biscuit, ice cream.</p>
+                    </div>
+                    <hr>
+                    <div class="qty-container">
+                    <span class="qty-title">Quantity: </span>
+                            <input class="quantity-input" type="number" value="1">
+                    </div>
+                    <div class="carts">
+                    <button class="add-to-cart" data-name="Chocolate Cake" data-price="170" data-img="img/product53.png">Add to Cart</button>
+                    </div>
+                    <div class="price">
+                        <span>₱170</span>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+        <div class="product">
+        <div class="modal" id="modal30">
+            <div  class="menu-price">
+                <div class="product-img">
+                    <img src="img/cart-item0024.png" alt="">
+                </div>
+                <div class="container2">
+                    <div class="close">
+                        <span onclick="closeModal('modal30')">&times;</span>
+                    </div>
+                    <div class="title">
+                        <span>Chocolate Chip Muffin</span>
+                    </div>
+                    <div class="pd">
+                    <p>Desserts consists of sweet foods, such as cake, biscuit, ice cream.</p>
+                    </div>
+                    <hr>
+                    <div class="qty-container">
+                    <span class="qty-title">Quantity: </span>
+                            <input class="quantity-input" type="number" value="1">
+                    </div>
+                    <div class="carts">
+                    <button class="add-to-cart" data-name="Chocolate Chip Muffin" data-price="50" data-img="img/product54.png">Add to Cart</button>
+                    </div>
+                    <div class="price">
+                        <span>₱50</span>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+        <div class="product">
+        <div class="modal" id="modal31">
+            <div  class="menu-price">
+                <div class="product-img">
+                    <img src="img/cart-item0025.png" alt="">
+                </div>
+                <div class="container2">
+                    <div class="close">
+                        <span onclick="closeModal('modal31')">&times;</span>
+                    </div>
+                    <div class="title">
+                        <span>Chocolate Chip Cookies</span>
+                    </div>
+                    <div class="pd">
+                    <p>Desserts consists of sweet foods, such as cake, biscuit, ice cream.</p>
+                    </div>
+                    <hr>
+                    <div class="qty-container">
+                    <span class="qty-title">Quantity: </span>
+                            <input class="quantity-input" type="number" value="1">
+                    </div>
+                    <div class="carts">
+                    <button class="add-to-cart" data-name="Chocolate Chip Cookies" data-price="89" data-img="img/product55.png">Add to Cart</button>
+                    </div>
+                    <div class="price">
+                        <span>₱89</span>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+        <div class="product">
+        <div class="modal" id="modal32">
+            <div  class="menu-price">
+                <div class="product-img">
+                    <img src="img/cart-item0026.png" alt="">
+                </div>
+                <div class="container2">
+                    <div class="close">
+                        <span onclick="closeModal('modal32')">&times;</span>
+                    </div>
+                    <div class="title">
+                        <span>Donuts</span>
+                    </div>
+                    <div class="pd">
+                    <p>Desserts consists of sweet foods, such as cake, biscuit, ice cream.</p>
+                    </div>
+                    <hr>
+                    <div class="qty-container">
+                    <span class="qty-title">Quantity: </span>
+                            <input class="quantity-input" type="number" value="1">
+                    </div>
+                    <div class="carts">
+                    <button class="add-to-cart" data-name="Donuts" data-price="110" data-img="img/product56.png">Add to Cart</button>
+                    </div>
+                    <div class="price">
+                        <span>₱110</span>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+        <div class="product">        
+        <div class="modal" id="modal33">
+            <div  class="menu-price">
+                <div class="product-img">
+                    <img src="img/cart-item0027.png" alt="">
+                </div>
+                <div class="container2">
+                    <div class="close">
+                        <span onclick="closeModal('modal33')">&times;</span>
+                    </div>
+                    <div class="title">
+                        <span>Waffles</span>
+                    </div>
+                    <div class="pd">
+                    <p>Desserts consists of sweet foods, such as cake, biscuit, ice cream.</p>
+                    </div>
+                    <hr>
+                    <div class="qty-container">
+                    <span class="qty-title">Quantity: </span>
+                            <input class="quantity-input" type="number" value="1">
+                    </div>
+                    <div class="carts">
+                    <button class="add-to-cart" data-name="Waffles" data-price="130" data-img="img/product57.png">Add to Cart</button>
+                    </div>
+                    <div class="price">
+                        <span>₱130</span>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+        <div class="product">           
+        <div class="modal" id="modal34">
+            <div  class="menu-price">
+                <div class="product-img">
+                    <img src="img/cart-item0031.png" alt="">
+                </div>
+                <div class="container2">
+                    <div class="close">
+                        <span onclick="closeModal('modal34')">&times;</span>
+                    </div>
+                    <div class="title">
+                        <span>Classic Cheesy Pizza</span>
+                    </div>
+                    <div class="pd">
+                        <p>Pizza is a dish of italian origin consisting of a usually round, flat base of leavend wheat based dough.</p>
+                    </div>
+                    <hr>
+                    <div class="qty-container">
+                    <span class="qty-title">Quantity: </span>
+                            <input class="quantity-input" type="number" value="1">
+                    </div>
+                    <div class="carts">
+                    <button class="add-to-cart" data-name="classic Cheesy Pizza" data-price="70" data-img="img/product61.png">Add to Cart</button>
+                    </div>
+                    <div class="price">
+                        <span>₱70</span>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+        
+        <div class="product">
+        <div class="modal" id="modal35">
+            <div  class="menu-price">
+                <div class="product-img">
+                    <img src="img/cart-item0032.png" alt="">
+                </div>
+                <div class="container2">
+                    <div class="close">
+                        <span onclick="closeModal('modal35')">&times;</span>
+                    </div>
+                    <div class="title">
+                        <span>Vegetarian Style Pizza</span>
+                    </div>
+                    <div class="pd">
+                    <p>Pizza is a dish of italian origin consisting of a usually round, flat base of leavend wheat based dough.</p>
+                    </div>
+                    <hr>
+                    <div class="qty-container">
+                    <span class="qty-title">Quantity: </span>
+                            <input class="quantity-input" type="number" value="1">
+                    </div>
+                    <div class="carts">
+                    <button class="add-to-cart" data-name="Vegetarian Style Pizza" data-price="70" data-img="img/product62.png">Add to Cart</button>
+                    </div>
+                    <div class="price">
+                        <span>₱70</span>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+        <div class="product">        
+        <div class="modal" id="modal36">
+            <div  class="menu-price">
+                <div class="product-img">
+                    <img src="img/cart-item0033.png" alt="">
+                </div>
+                <div class="container2">
+                    <div class="close">
+                        <span onclick="closeModal('modal36')">&times;</span>
+                    </div>
+                    <div class="title">
+                        <span>Mushroom Pepper Pizza</span>
+                    </div>
+                    <div class="pd">
+                    <p>Pizza is a dish of italian origin consisting of a usually round, flat base of leavend wheat based dough.</p>
+                    </div>
+                    <hr>
+                    <div class="qty-container">
+                    <span class="qty-title">Quantity: </span>
+                            <input class="quantity-input" type="number" value="1">
+                    </div>
+                    <div class="carts">
+                    <button class="add-to-cart" data-name="Mushroom Pepper Pizza" data-price="75" data-img="img/product63.png">Add to Cart</button>
+                    </div>
+                    <div class="price">
+                        <span>₱75</span>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+        <div class="product">
+        <div class="modal" id="modal37">
+            <div  class="menu-price"> 
+                <div class="product-img">
+                    <img src="img/cart-item0034.png" alt="">
+                </div>
+                <div class="container2">
+                    <div class="close">
+                        <span onclick="closeModal('modal37')">&times;</span>
+                    </div>
+                    <div class="title">
+                        <span>Cheesy Bell Pepper Pizza</span>
+                    </div>
+                    <div class="pd">
+                    <p>Pizza is a dish of italian origin consisting of a usually round, flat base of leavend wheat based dough.</p>
+                    </div>
+                    <hr>
+                    <div class="qty-container">
+                    <span class="qty-title">Quantity: </span>
+                            <input class="quantity-input" type="number" value="1">
+                    </div>
+                    <div class="carts">
+                    <button class="add-to-cart" data-name="Cheesy Bell Pepper Pizza" data-price="80" data-img="img/product64.png">Add to Cart</button>
+                    </div>
+                    <div class="price">
+                        <span>₱80</span>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+        <div class="product">
+        <div class="modal" id="modal38">
+            <div  class="menu-price">
+                <div class="product-img">
+                    <img src="img/cart-item0035.png" alt="">
+                </div>
+                <div class="container2">
+                    <div class="close">
+                        <span onclick="closeModal('modal38')">&times;</span>
+                    </div>
+                    <div class="title">
+                        <span>Peperoni Cheese Pizza</span>
+                    </div>
+                    <div class="pd">
+                    <p>Pizza is a dish of italian origin consisting of a usually round, flat base of leavend wheat based dough.</p>
+                    </div>
+                    <hr>
+                    <div class="qty-container">
+                    <span class="qty-title">Quantity: </span>
+                            <input class="quantity-input" type="number" value="1">
+                    </div>
+                    <div class="carts">
+                    <button class="add-to-cart" data-name="Peperoni Cheese Pizza" data-price="70" data-img="img/product65.png">Add to Cart</button>
+                    </div>
+                    <div class="price">
+                        <span>₱70</span>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+        <div class="product">
+        <div class="modal" id="modal39">
+            <div  class="menu-price">
+                <div class="product-img">
+                    <img src="img/cart-item0036.png" alt="">
+                </div>
+                <div class="container2">
+                    <div class="close">
+                        <span onclick="closeModal('modal39')">&times;</span>
+                    </div>
+                    <div class="title">
+                        <span>Omelete Style Pizza</span>
+                    </div>
+                    <div class="pd">
+                    <p>Pizza is a dish of italian origin consisting of a usually round, flat base of leavend wheat based dough.</p>
+                    </div>
+                    <hr>
+                    <div class="qty-container">
+                    <span class="qty-title">Quantity: </span>
+                            <input class="quantity-input" type="number" value="1">
+                    </div>
+                    <div class="carts">
+                    <button class="add-to-cart" data-name="Omelete Style Pizza" data-price="90" data-img="img/product66.png">Add to Cart</button>
+                    </div>
+                    <div class="price">
+                        <span>₱90</span>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    
+        <div class="product">     
+        <div class="modal" id="modal40">
+            <div  class="menu-price">
+                <div class="product-img">
+                    <img src="img/cart-item0037.png" alt="">
+                </div>
+                <div class="container2">
+                    <div class="close">
+                        <span onclick="closeModal('modal40')">&times;</span>
+                    </div>
+                    <div class="title">
+                        <span>Swedish Style Pizza</span>
+                    </div>
+                    <div class="pd">
+                    <p>Pizza is a dish of italian origin consisting of a usually round, flat base of leavend wheat based dough.</p>
+                    </div>
+                    <hr>
+                    <div class="qty-container">
+                    <span class="qty-title">Quantity: </span>
+                            <input class="quantity-input" type="number" value="1">
+                    </div>
+                    <div class="carts">
+                    <button class="add-to-cart" data-name="Swedish Style Pizza" data-price="85" data-img="img/product67.png">Add to Cart</button>
+                    </div>
+                    <div class="price">
+                        <span>₱85</span>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+    <div class="modal1" id="modal41">
+            <div  class="menu-price1">
+               
+                    <div class="close">
+                        <span onclick="closeModal('modal41')">&times;</span>
+                    </div>
+
+                    <div id="cart">
+                        <h2>Cart</h2>
+                        <ul id="cart-items">
+                        <!-- Cart items will be displayed here -->
+                        </ul>
+                        <div class="total">
+                        <p class="p">Order Total <span class="span" >₱</span><span id="cart-total">0</span></p>
+                        </div>
+                        <div class="check-out">
+                        <button id="checkout-btn" onclick="window.location.href='checkout.html'">Checkout</button>
+                        </div>
+                        
+                    </div>          
+        </div>
+    </div>
+
+
+    
+    <div  id="container1" class="container active">
+        
+        <div class="items">
+            <div class="items-box">
+                <div class="item-boxes">
+                <img src="img/product1.png" alt="" onclick="openModal('modal1')">
+                </div>
+                <div>
+                    <span>Americano</span>
+                </div>
+                
+            </div>
+              
+            <div class="items-box">
+                <div class="item-boxes">
+                    <img src="img/product2.png" alt="" onclick="openModal('modal2')">
+                    </div>
+                    <div>
+                        <span>Espresso</span>
+                    </div>
+            </div>
+            
+        </div>
+       
+
+
+        <div class="items">
+            <div class="items-box">
+                <div class="item-boxes">
+                <img src="img/product3.png" alt="" onclick="openModal('modal3')">
+                </div>
+                <div>
+                    <span>Cappuccino</span>
+                </div>
+                
+            </div>
+              
+            <div class="items-box">
+                <div class="item-boxes">
+                    <img src="img/product4.png" alt="" onclick="openModal('modal4')">
+                    </div>
+                    <div>
+                        <span>Latte</span>
+                    </div>
+            </div>
+            
+        </div>
+
+        <div class="items">
+            <div class="items-box">
+                <div class="item-boxes">
+                <img src="img/product5.png" alt="" onclick="openModal('modal5')">
+                </div>
+                <div>
+                    <span>Long Black</span>
+                </div>
+                
+            </div>
+              
+            <div class="items-box">
+                <div class="item-boxes">
+                    <img src="img/product6.png" alt="" onclick="openModal('modal6')">
+                    </div>
+                    <div>
+                        <span>Caramel Macchiato</span>
+                    </div>
+            </div>
+            
+        </div>
+
+        <div class="items">
+            <div class="items-box">
+                <div class="item-boxes">
+                <img src="img/product7.png" alt="" onclick="openModal('modal7')">
+                </div>
+                <div>
+                    <span>Hot Chocolate</span>
+                </div>
+                
+            </div>
+              
+            <div class="items-box">
+                <div class="item-boxes">
+                    <img src="img/product8.png" alt="" onclick="openModal('modal8')">
+                    </div>
+                    <div>
+                        <span>Mocha</span>
+                    </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div  id="container2" class="container">
+        
+        <div class="items">
+            <div class="items-box">
+                <div class="item-boxes">
+                <img src="img/product21.png" alt="" onclick="openModal('modal9')">
+                </div>
+                <div>
+                    <span>Vietnamese Iced Coffee</span>
+                </div>
+                
+            </div>
+              
+            <div class="items-box">
+                <div class="item-boxes">
+                    <img src="img/product22.png" alt="" onclick="openModal('modal10')">
+                    </div>
+                    <div>
+                        <span>Iced Golden Caffe<br>Latte</span>
+                    </div>
+            </div>
+            
+        </div>
+       
+
+
+        <div class="items">
+            <div class="items-box">
+                <div class="item-boxes">
+                <img src="img/product23.png" alt="" onclick="openModal('modal11')">
+                </div>
+                <div>
+                    <span>Baridi Cold Brew</span>
+                </div>
+                
+            </div>
+              
+            <div class="items-box">
+                <div class="item-boxes">
+                    <img src="img/product24.png" alt="" onclick="openModal('modal12')">
+                    </div>
+                    <div>
+                        <span>Brown sugar cold Brew<br>oat latte With Jelly</span>
+                    </div>
+            </div>
+            
+        </div>
+
+        <div class="items">
+            <div class="items-box">
+                <div class="item-boxes">
+                <img src="img/product25.png" alt="" onclick="openModal('modal13')">
+                </div>
+                <div>
+                    <span>The Black Tie</span>
+                </div>
+                
+            </div>
+              
+            <div class="items-box">
+                <div class="item-boxes">
+                    <img src="img/product26.png" alt="" onclick="openModal('modal14')">
+                    </div>
+                    <div>
+                        <span>Iced Espresso</span>
+                        
+                    </div>
+            </div>
+            
+        </div>
+
+        <div class="itemss">
+            <div class="items-box">
+                <div class="item-boxes">
+                <img src="img/product27.png" alt="" onclick="openModal('modal15')">
+                </div>
+                <div>
+                    <span>Iced Caramel<br>Macchiato</span>  
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+        <div id="container3" class="container">
+
+            
+
+            <div class="items">
+                <div class="items-box">
+                    <div class="item-boxes">
+                    <img src="img/product31.png" alt="" onclick="openModal('modal16')">
+                    </div>
+                    <div>
+                        <span>Vanilla Milkshake</span>
+                    </div>
+                    
+                </div>
+                  
+                <div class="items-box">
+                    <div class="item-boxes">
+                        <img src="img/product32.png" alt="" onclick="openModal('modal17')">
+                        </div>
+                        <div>
+                            <span>Sundae Chocolate</span>
+                        </div>
+                </div>
+                
+            </div>
+           
+    
+    
+            <div class="items">
+                <div class="items-box">
+                    <div class="item-boxes">
+                    <img src="img/product33.png" alt="" onclick="openModal('modal18')">
+                    </div>
+                    <div>
+                        <span>Peppermint Tart</span>
+                    </div>
+                    
+                </div>
+                  
+                <div class="items-box">
+                    <div class="item-boxes">
+                        <img src="img/product34.png" alt="" onclick="openModal('modal19')">
+                        </div>
+                        <div>
+                            <span>Cookies And Cream</span>
+                        </div>
+                </div>
+                
+            </div>
+    
+            <div class="itemss">
+                <div class="items-box">
+                    <div class="item-boxes">
+                    <img src="img/product35.png" alt="" onclick="openModal('modal20')">
+                    </div>
+                    <div>
+                        <span>Pistachio White Chocolate</span>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+
+
+
+        <div id="container5" class="container">
+
+            <div class="items">
+                <div class="items-box">
+                    <div class="item-boxes">
+                    <img src="img/product41.png" alt="" onclick="openModal('modal21')">
+                    </div>
+                    <div>
+                        <span>Classic Cheeseburger</span>
+                    </div>
+                    
+                </div>
+                  
+                <div class="items-box">
+                    <div class="item-boxes">
+                        <img src="img/product42.png" alt="" onclick="openModal('modal22')">
+                        </div>
+                        <div>
+                            <span>Bacon Cheeseburger</span>
+                        </div>
+                </div>
+                
+            </div>
+        
+            <div class="items">
+                <div class="items-box">
+                    <div class="item-boxes">
+                    <img src="img/product43.png" alt="" onclick="openModal('modal23')">
+                    </div>
+                    <div>
+                        <span>Chicken Burger</span>
+                    </div>
+                    
+                </div>
+                  
+                <div class="items-box">
+                    <div class="item-boxes">
+                        <img src="img/product44.png" alt="" onclick="openModal('modal24')">
+                        </div>
+                        <div>
+                            <span>Cheese Fries</span>
+                        </div>
+                </div>
+            </div>
+    
+            <div class="items">
+                <div class="items-box">
+                    <div class="item-boxes">
+                    <img src="img/product45.png" alt="" onclick="openModal('modal25')">
+                    </div>
+                    <div>
+                        <span>Sour Cream Fries</span>
+                    </div>
+                </div>
+                <div class="items-box">
+                    <div class="item-boxes">
+                        <img src="img/product46.png" alt="" onclick="openModal('modal26')">
+                        </div>
+                        <div>
+                            <span>Curly Salted Fries</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+        <div  id="container6" class="container">
+        
+            <div class="items">
+                <div class="items-box">
+                    <div class="item-boxes">
+                    <img src="img/product51.png" alt="" onclick="openModal('modal27')">
+                    </div>
+                    <div>
+                        <span>Panna Cotta</span>
+                    </div>
+                    
+                </div>
+                  
+                <div class="items-box">
+                    <div class="item-boxes">
+                        <img src="img/product52.png" alt="" onclick="openModal('modal28')">
+                        </div>
+                        <div>
+                            <span>Carrot Cake</span>
+                        </div>
+                </div>
+                
+            </div>
+           
+    
+    
+            <div class="items">
+                <div class="items-box">
+                    <div class="item-boxes">
+                    <img src="img/product53.png" alt="" onclick="openModal('modal29')">
+                    </div>
+                    <div>
+                        <span>Chocolate Cake</span>
+                    </div>
+                    
+                </div>
+                  
+                <div class="items-box">
+                    <div class="item-boxes">
+                        <img src="img/product54.png" alt="" onclick="openModal('modal30')">
+                        </div>
+                        <div>
+                            <span>Chocolate Chip Muffin</span>
+                        </div>
+                </div>
+                
+            </div>
+    
+            <div class="items">
+                <div class="items-box">
+                    <div class="item-boxes">
+                    <img src="img/product55.png" alt="" onclick="openModal('modal31')">
+                    </div>
+                    <div>
+                        <span>Chocolate Chip Cookies</span>
+                    </div>
+                    
+                </div>
+                  
+                <div class="items-box">
+                    <div class="item-boxes">
+                        <img src="img/product56.png" alt="" onclick="openModal('modal32')">
+                        </div>
+                        <div>
+                            <span>Donuts</span>
+                            
+                        </div>
+                </div>
+                
+            </div>
+    
+            <div class="itemss">
+                <div class="items-box">
+                    <div class="item-boxes">
+                    <img src="img/product57.png" alt="" onclick="openModal('modal33')">
+                    </div>
+                    <div>
+                        <span>Waffles</span>  
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+
+
+        <div  id="container7" class="container">
+        
+            <div class="items">
+                <div class="items-box">
+                    <div class="item-boxes">
+                    <img src="img/product61.png" alt="" onclick="openModal('modal34')">
+                    </div>
+                    <div>
+                        <span>Classic Cheesy Pizza</span>
+                    </div>
+                    
+                </div>
+                  
+                <div class="items-box">
+                    <div class="item-boxes">
+                        <img src="img/product62.png" alt="" onclick="openModal('modal35')">
+                        </div>
+                        <div>
+                            <span>Vegetarian  Style Pizza</span>
+                        </div>
+                </div>
+                
+            </div>
+           
+    
+    
+            <div class="items">
+                <div class="items-box">
+                    <div class="item-boxes">
+                    <img src="img/product63.png" alt="" onclick="openModal('modal36')">
+                    </div>
+                    <div>
+                        <span>Mushroom Pepper Pizza</span>
+                    </div>
+                    
+                </div>
+                  
+                <div class="items-box">
+                    <div class="item-boxes">
+                        <img src="img/product64.png" alt="" onclick="openModal('modal37')">
+                        </div>
+                        <div>
+                            <span>Cheesy Bell Pepper Pizza</span>
+                        </div>
+                </div>
+                
+            </div>
+    
+            <div class="items">
+                <div class="items-box">
+                    <div class="item-boxes">
+                    <img src="img/product65.png" alt="" onclick="openModal('modal38')">
+                    </div>
+                    <div>
+                        <span>Peperoni Cheese Pizza</span>
+                    </div>
+                    
+                </div>
+                  
+                <div class="items-box">
+                    <div class="item-boxes">
+                        <img src="img/product66.png" alt="" onclick="openModal('modal39')">
+                        </div>
+                        <div>
+                            <span>Omelete Style Pizza</span>
+                            
+                        </div>
+                </div>
+                
+            </div>
+    
+            <div class="itemss">
+                <div class="items-box">
+                    <div class="item-boxes">
+                    <img src="img/product67.png" alt="" onclick="openModal('modal40')">
+                    </div>
+                    <div>
+                        <span>Swedish Style Pizza</span>  
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+
+
+    
+    <script src="index.js"></script>
+    
+    
+</body>
+</html>

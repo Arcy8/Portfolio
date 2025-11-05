@@ -1,0 +1,94 @@
+
+
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    background-color: rgb(20, 19, 19);
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 1;
+}
+
+.left-section ul{
+    display: flex;
+    list-style-type: none;
+    margin-left: 20px;
+}
+
+.left-section li a{
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+    margin-left: 30px;
+    color: rgb(237, 235, 235);
+
+}
+
+.left-section li a:hover{
+    color: rgb(134, 74, 14);
+
+}
+.left-section li a:active{
+    opacity: 0.8;
+}
+
+.middle-section img{
+    height: 79px;
+    margin-right: 75px;
+
+}
+
+.right-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.right-section span{
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 30px;
+    color: white;
+    margin-right: 20px;
+}
+
+
+
+.right-section img{
+    width: 60px;
+    margin: 0px 80px 0px 30px;
+    cursor: pointer;
+    color: white;
+}
+
+.right-section button{
+    margin-left: 20px;
+    background-color:#FAB005;
+    padding: 8px 20px;
+    font-size: 13px;
+    font-weight: bold;
+    border-radius: 2px;
+    border: 1px solid #FAB005;
+    cursor: pointer;
+    color: whitesmoke;
+}
+
+.right-section button:hover{
+    opacity: 0.8;
+    
+}
+
+.right-section button:active{
+    opacity: 0.7;
+}
+
+
+.right-section a{
+    text-decoration: none;
+    color: rgb(231, 225, 225);
+    font-weight: bold;
+}

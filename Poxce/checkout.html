@@ -1,0 +1,92 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poxce Cafe</title>
+    <link rel="stylesheet" href="nav.css">
+    <link rel="icon" href="img/999.png">
+    <link rel="stylesheet" href="checkout.css">
+    <script src="https://cdn.jsdelivr.net/npm/qrious"></script>
+
+</head>
+<body>
+
+<?php
+      $select_user = mysqli_query($conn, "SELECT * FROM `user_form` WHERE id = '$user_id'") or die('query failed');
+      if(mysqli_num_rows($select_user) > 0){
+         $fetch_user = mysqli_fetch_assoc($select_user);
+      };
+   ?>
+
+    <div class="nav">
+        <div class="left-section">
+        <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="menu.html">MENU</a></li>
+            <li><a href="about-us.html">ABOUT US</a></li>
+            
+           
+        </ul>
+        </div>
+        <div class="middle-section">
+            <img src="img/999.png" alt="website logo">
+
+        </div>
+
+        <div class="right-section">
+        <span><?php echo $fetch_user['name']; ?></span>
+        <a href="index.php?logout=<?php echo $user_id; ?>" onclick="return confirm('are your sure you want to logout?');" class="delete-btn"><button>logout</button></a>
+        <img>
+        </div>
+
+ </div>
+
+
+
+<div class="container">
+    <h1>Checkout</h1>
+    <table>
+        <thead>
+        <tr>
+            <th>Item</th>
+            <th>Quantity</th>
+            <th>Price</th>
+            <th>Total</th>
+            <th>Remove</th>
+        </tr>
+        </thead>
+        <tbody id="checkout-items">
+        <!-- Cart items will be displayed here -->
+        </tbody>
+    </table>
+    <div class="total">Total: ₱<span id="checkout-total">0</span></div>
+     <div class="qr">
+            <button id="generateQRButton">checkout</button>
+            <form>
+                <img src="img/icons8-gcash-100.png" alt="">
+                <input type="radio" name="pay">
+                <label for="gcash">GCASH</label><br>
+                <img src="img/icons8-visa-100.png" alt="">
+                <input type="radio" name="pay">
+                <label for="visa">VISA</label><br>
+                <img src="img/icons8-paypal-100.png" alt="">
+                <input type="radio" name="pay">
+                <label for="paypal">PAYPAL</label><br>
+            </form>
+            <canvas id="qrcode"></canvas>
+           
+     </div>
+    </div>
+ 
+
+
+
+<script src="script.js">
+</script>
+
+
+</body>
+</html>

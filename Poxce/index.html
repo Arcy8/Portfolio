@@ -1,0 +1,228 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poxce Cafe</title>
+    <link rel="stylesheet" href="nav.css">
+    <link rel="stylesheet" href="main.css">
+    <link rel="icon" href="img/999.png">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="modal.css">
+    <link rel="stylesheet" href="cart.css">
+   
+</head>
+<body>
+<?php
+      $select_user = mysqli_query($conn, "SELECT * FROM `user_form` WHERE id = '$user_id'") or die('query failed');
+      if(mysqli_num_rows($select_user) > 0){
+         $fetch_user = mysqli_fetch_assoc($select_user);
+      };
+   ?>
+
+    
+
+    <div class="nav">
+        <div class="left-section">
+        <ul>
+            <li><a href="#">HOME</a></li>
+            <li><a href="menu.html">MENU</a></li>
+            <li><a href="about-us.html">ABOUT US</a></li>
+           
+        </ul>
+        </div>
+        <div class="middle-section">
+            <img src="img/999.png" alt="website logo">
+
+        </div>
+
+        <div class="right-section">
+        
+            <span><?php echo $fetch_user['name']; ?></span>
+            <a href="index.php?logout=<?php echo $user_id; ?>" onclick="return confirm('are your sure you want to logout?');" class="delete-btn"><button>logout</button></a>
+            <img src="img/logo1.png" onclick="openModal('modal41')" alt="">
+        </div>
+
+ </div>
+
+
+    <div class="containers">
+        <div class="slides">
+            <div class="slide slide1"><img src="img/new1.png" alt=""></div>
+            <div class="slide slide2"><img src="img/New2.png" alt=""></div>
+            <div class="slide slide3"><img src="img/new3.png" alt=""></div>
+        </div>
+    </div>
+
+
+    <div class="box">
+        <h1 class="h1">Our Best Seller</h1>
+
+
+        <div class="best-seller-box">
+            <div class="best-seller">
+                <div class="macchiato">
+                    <img src="img/cart-item6.png" alt="">
+                </div>
+                <div class="cm">
+                    <span>Caramel Macchiato</span>
+                    <p>Indulge in our best-selling Caramel Macchiato – a perfect blend of rich espresso, velvety steamed milk, and buttery caramel. Crafted to perfection, it's a delightful symphony of flavors.</p>
+                </div>
+            </div>
+            <div class="description">
+                <div class="p">
+                    
+                   
+                </div>
+                    <span class="also">Also try our other coffee!</span>
+
+                    <div class="best-coffee">
+                        <div class="coffee">
+                            <div class="bs1">
+                                <img src="img/bs1.png">
+                            </div>
+                            <div class="cart">
+                                <span>Latte</span>
+                            </div>
+                            
+
+                        </div>
+                        <div class="coffee">
+                            <div class="bs1">
+                                <img src="img/bs2.png">
+                            </div>
+                            <div class="cart">
+                                <span>Cappuccino</span>
+                            </div>
+
+                        </div>
+                        <div class="coffee">
+                            <div class="bs1">
+                                <img src="img/bs3.png">
+                            </div>
+                            <div class="cart">
+                                <span>Americano</span>
+                            </div>
+                        </div>
+                        <div class="coffee">
+                            <div class="bs1">
+                                <img src="img/bs4.png">
+                            </div>
+                            <div class="cart">
+                                <span>Espresso</span>
+                            </div>
+                            
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="modal1" id="modal41">
+            <div  class="menu-price1">
+               
+                    <div class="close">
+                        <span onclick="closeModal('modal41')">&times;</span>
+                    </div>
+
+                    <div id="cart">
+                        <h2>Cart</h2>
+                        <ul id="cart-items">
+                        <!-- Cart items will be displayed here -->
+                        </ul>
+                        <div class="total">
+                        <p class="p">Order Total <span class="span" >₱</span><span id="cart-total">0</span></p>
+                        </div>
+                        <div class="check-out">
+                        <button id="checkout-btn" onclick="window.location.href='checkout.php'">Checkout</button>
+                        </div>
+                        
+                    </div>          
+        </div>
+    </div>
+
+
+
+
+
+    
+
+    <footer>
+        <div class="one">
+            <div class="img-logo1">
+                <img src="img/999.png"> <br>
+                <span>Taste the best coffee in town!</span>
+            </div>
+            <div class="social">
+                <img src="img/icons8-facebook-100 (3).png">
+                <img src="img/icons8-pinterest-100 (1).png">
+                <img src="img/icons8-instagram-100 (2).png">
+                <img src="img/icons8-twitter-100 (2).png">
+            </div>
+
+            <div class="order">
+                <a href="menu.php"><button>Order Now</button></a>
+            </div>
+            
+        </div>
+        <div class="one">
+            <div class="contact">
+                <div  class="cn">
+                    <span>CONTACT US</span>
+                </div>
+                
+
+                <div class="con">
+                    <img src="img/icons8-phone-100 (3).png" alt="">
+                    <span>0998 442 3578</span>
+                </div>
+                <div class="con">
+                    <img src="img/icons8-email-100 (4).png" alt="">
+                    <span>poxcecafe@gmail.com</span>
+                </div>
+
+                <div class="con">
+                    <img src="img/icons8-location-100 (2).png" alt="">
+                    <span>Zone 1 Taca Jaro</span>
+                </div>
+            </div>
+        </div>
+        <div class="two">
+            <div class="cn">
+                <span>SEND US A MESSAGE</span>
+            </div>
+            
+            <form action="">
+                <div class="info">
+                    <div class="ue">
+                    <img src="img/icons8-user-100 (4).png">
+                    <input type="text" placeholder="Username">
+                    </div>
+                    <div class="ue">
+                    <img src="img/icons8-email-100 (4).png">
+                    <input type="email" placeholder="Email">
+                    </div>
+                </div>
+                <div class="message">
+                    <textarea>
+
+                    </textarea>
+                </div>
+                <div class="submit">
+                    <input type="submit">
+                </div>
+                
+
+
+            </form>
+        </div>
+    </footer>
+    
+
+    <script src="index.js"></script>
+</body>
+</html>

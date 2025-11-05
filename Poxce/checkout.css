@@ -1,0 +1,140 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 100px;
+    padding-bottom: 350px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+
+}
+
+th, td {
+    padding:10px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;   
+    vertical-align: middle; /* Align content vertically center */
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+td img {
+    height: 50px;
+    width: 50px;
+    margin: 0 auto; /* Center the image horizontally */
+    
+}
+
+
+.product-name {
+    text-align: center; /* Align the product name in the center */
+}
+
+.quantity-controls {
+    display: flex;
+    align-items: center;
+}
+
+.quantity-controls button {
+    margin: 0 5px;
+    padding: 5px 10px;
+    border: 1px solid #ddd;
+    background-color: #f2f2f2;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.total {
+    font-weight: bold;
+    text-align: right;
+    margin-bottom: 20px;
+}
+
+.remove-button {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background: url('remove.png') no-repeat center center;
+    background-size: cover;
+    border: none;
+    cursor: pointer;
+    vertical-align: middle;
+    transition: background-color 0.3s ease;
+    margin-left: 18px;
+}
+
+.remove-button:hover {
+    opacity: 0.9;
+    height: 31px;
+    width: 31px;
+}
+
+.remove-button:active{
+    opacity: 0.8;
+}
+
+
+.qr{
+  position: absolute;
+  left: 50;
+}
+
+.qr img{
+    height: 20px;
+    object-fit: cover;
+    width: 20px;
+}
+
+.qr label{
+    font-size: 16px;
+    font-weight: bold;
+}
+
+
+
+
+.qr button{
+    padding: 10px 80px;
+    background-color:  white;
+    border: 1px solid  rgb(104, 64, 15);
+    color:rgb(104, 64, 15);
+    font-family: sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    transition: ease 0.3s all;
+    cursor: pointer;
+    border-radius: 3px;
+    margin-bottom: 10px;
+
+
+}
+
+
+.qr button:hover{
+    opacity: 0.9;
+    background-color: rgb(104, 64, 15);
+    color: white;
+}
+
+.qr button:active{
+    opacity: 0.7;
+}
